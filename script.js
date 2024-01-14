@@ -8,22 +8,30 @@ const promise = new Promise((resolve,reject)=>{
 function abc(){
 	return promise
 }
-x.then((arr)=>{
+const x = abc()
+setTimeout(()=>{
+	x.then((arr)=>{
 	const oddArr =arr.filter((num)=>{
 		return parseInt(num%2)===1
 	})
 	const div = document.getElementById("output")
 	div.innerText = oddArr;
 })
+},1000)
 
-x.then((arr)=>{
+setTimeout(()=>{
+	x.then((arr)=>{
 	const newArr =arr.map((num)=>{
 		if(parseInt(num%2)===0){
 			return num*2
+		}else{
+			return num
 		}
 	})
 	const div = document.getElementById("output")
 	div.innerText = newArr;
 })
+},3000)
 
-const x = abc()
+
+

@@ -31,7 +31,7 @@ setTimeout(()=>{
 	const div = document.getElementById("output")
 	div.innerText = newArr;
 })
-},3000)
+},2000)
 
 
 
